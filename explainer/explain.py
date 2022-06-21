@@ -91,7 +91,7 @@ class Explainer:
             print("neigh graph idx: ", node_idx, node_idx_new)
             
             # Save node_idx, node_idx_new to file
-            with open("../log/node_idx_new_map.csv", "a") as f:
+            with open("log/node_idx_new_map.csv", 'a') as f:
                 f.write("{},{}\n".format(node_idx, node_idx_new))
 
             sub_label = np.expand_dims(sub_label, axis=0)
