@@ -251,6 +251,10 @@ def main():
         graph_idx=prog_args.graph_idx,
     )
 
+    # Delete file log/node_idx_new_map.csv if it exists
+    if os.path.isfile("log/node_idx_new_map.csv"):
+        os.remove("log/node_idx_new_map.csv")
+
     # TODO: API should definitely be cleaner
     # Let's define exactly which modes we support 
     # We could even move each mode to a different method (even file)
