@@ -330,6 +330,8 @@ class Explainer:
 
         plt.switch_backend("agg")
         plt.plot(recall, precision)
+        if not os.path.exists("log/pr"):
+            os.makedirs("log/pr")
         plt.savefig("log/pr/pr_" + self.args.dataset + "_" + model + ".png")
 
         plt.close()
